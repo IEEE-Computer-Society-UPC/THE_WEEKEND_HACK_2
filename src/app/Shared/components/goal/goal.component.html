@@ -1,0 +1,17 @@
+<div class="ServiceContent">
+  <div class="cardService" *ngFor="let goal of goals">
+    <div class="textCard">
+      <div class="h2Card">
+        <h2> {{goal.name}}</h2>
+      </div>
+
+      <p>
+        {{goal.description}}
+      </p>
+    </div>
+    <div class="imageCard">
+      <img [src]="goal.image" alt="">
+    </div>
+
+  </div>
+</div>

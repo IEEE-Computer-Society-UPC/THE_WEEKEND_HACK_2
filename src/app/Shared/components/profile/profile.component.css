@@ -1,0 +1,130 @@
+.contNosotros{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 355px;
+  border-radius: 10px;
+  margin: 40px ;
+  box-shadow: 0 0 10px var(--mainColor);
+}
+
+.card .content {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  background: var(--backgroundColor);
+}
+
+.card .content .img {
+  height: 50%;
+  margin-bottom: 5px;
+}
+
+.card .content .img img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+}
+
+.card .content span {
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  background: var(--mainColor) ;
+  transform: rotate(-35deg);
+  top: -50px;
+  left: -100px;
+}
+
+.card .content h4 {
+  z-index: 52;
+  font-size: 30px;
+  margin-bottom: 5px;
+  font-weight: bold;
+
+}
+
+.card .content h6 {
+  font-size: 20px;
+  color: var(--mainColor);
+}
+
+.card .content p {
+  font-size: 20px;
+
+  margin-top: 10px;
+}
+
+.card .links {
+  position: absolute;
+  z-index: 45;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+  padding: 20px;
+  align-items: center;
+  right: 10px;
+  top: 15px;
+  transition: .5s;
+}
+
+/*.card:hover .links {
+  right: -50px;
+  border-radius: 0 10px 10px 0;
+}*/
+
+
+.card .links a {
+  font-size: 20px;
+  color: #646069;
+}
+
+.card .links a:nth-child(1):hover {
+  color: #0158ca;
+}
+
+.card .links a:nth-child(2):hover {
+  color: #1052ab;
+}
+
+.card .links a:nth-child(3):hover {
+  color: #5614b7;
+}
+
+
+.containerFooter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+  height: 140px;
+  background-color: rgb(254, 132, 19);
+}
+
+@media screen and (max-width: 900px){
+  .card{
+    margin: 10px ;
+  }
+
+}

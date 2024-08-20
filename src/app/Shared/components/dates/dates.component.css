@@ -1,0 +1,196 @@
+.timeline{
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 0;
+  max-width: 1200px;
+}
+
+.timeline::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 6px;
+  background-color: var(--mainColor);
+  margin-left: -3px;
+  z-index: -2;
+}
+
+.container{
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 60%;
+}
+
+.container::after{
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  right: -17px;
+  background-color: var(--backgroundColor);
+  border: 4px solid var(--mainColor);
+  box-shadow: 0 0 7px var(--mainColor);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 100;
+  font-size: 1.89rem;
+  text-align: center;
+  font-weight: 600;
+  color: transparent;
+}
+
+.left{
+  left: -10%;
+}
+.right{
+  left: 50%;
+}
+.left::before{
+  content: '';
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid var(--mainColor);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--mainColor);
+}
+
+.right::before{
+  content: '';
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid var(--mainColor);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--mainColor) transparent transparent;
+}
+
+.right::after{
+  left: -16px;
+}
+
+.content{
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 0 7px var(--mainColor);
+  transition: .2s;
+}
+.content:hover{
+  box-shadow: 0 0 15px var(--mainColor);
+  transition: .2s;
+}
+.finally{
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.finally .decs{
+  width: 90%;
+}
+.finally .decs h5,h6{
+  color: var(--mainColor);
+}
+.content .tag{
+  color: var(--mainColor);
+  font-size: 1.2rem;
+  padding: 5px 0;
+  border-radius: 5px;
+  display: inline-block;
+}
+span{
+  color: var(--mainColor);
+}
+.content .decs{
+  font-family: "JetBrains Mono";
+  font-size: 1.8rem;
+  padding: 5px 0;
+}
+
+.content .decs p{
+  font-size: 1.3rem;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .timeline{
+    margin-top: 2rem;
+  }
+  .timeline::after{
+    left: 47px;
+  }
+  .right{
+    left: 37px;
+    width: 91%;
+  }
+  .left{
+    left: 37px;
+    width: 91%;
+  }
+
+  .left::before{
+    left: 30px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--mainColor) transparent transparent;
+  }
+
+  .left::after{
+    left: -7px;
+  }
+  .right::after{
+    left: -7px;
+  }
+  .finally{
+    width: 85%;
+  }
+  .contentButton{
+    flex-direction: column;
+  }
+  .buttonContent button{
+    margin: 0;
+  }
+}
+.contentButton{
+  display: flex;
+  justify-content: center;
+}
+.buttonContent{
+  display: flex;
+  justify-content: center;
+  margin: 10px 40px;
+}
+.buttonContent button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 3rem;
+  background: transparent;
+  border: 0.15rem solid var(--mainColor);
+  font-size: 1.5rem;
+  color: var(--mainColor);
+  margin: 30px 0.5rem;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px var(--mainColor);
+}
+.buttonContent button:hover{
+  box-shadow: 0 0 15px var(--mainColor);
+  color: var(--mainColor);
+  cursor: pointer;
+}
+.buttonContent button a{
+  color: var(--mainColor);
+  text-decoration: none;
+}

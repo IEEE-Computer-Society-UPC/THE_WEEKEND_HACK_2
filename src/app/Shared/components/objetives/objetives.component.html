@@ -1,0 +1,18 @@
+
+<div class="ServiceContent">
+  <div class="cardService" *ngFor="let objetive of objetives">
+    <div class="textCard">
+      <div class="h2Card">
+        <h2> {{objetive.name}}</h2>
+      </div>
+
+      <p>
+        {{objetive.description}}
+      </p>
+    </div>
+    <div class="imageCard">
+      <img [src]="objetive.image" alt="">
+    </div>
+
+  </div>
+</div>
